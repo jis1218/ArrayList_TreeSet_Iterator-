@@ -127,3 +127,31 @@ public class IteratorPrac {
 
 }
 ```
+## 4. 위의 클래스로 만든 로또번호 추출 예제
+
+#### 코드 예제
+
+```java
+
+public class LottoGenerator {
+
+	public void generateLottoNum(){
+
+	TreeSet<Integer> treeSet = new TreeSet<>();
+	Random random = new Random();
+
+	for(; 6>treeSet.size();){
+
+	int num = random.nextInt(45) + 1;
+	treeSet.add(num);
+	}
+
+	Iterator<Integer> iter = treeSet.iterator();
+
+	while(iter.hasNext()){
+		System.out.println(iter.next());
+	}
+	}
+
+}
+```
